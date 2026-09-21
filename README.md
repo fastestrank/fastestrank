@@ -2,7 +2,7 @@
 
 > Official FastestRank plugin packages, marketplace manifests, and canonical SEO Agent Skills.
 
-FastestRank provides SEO intelligence for AI agents (Claude Code, Codex CLI, Cursor, and Agents). It connects AI models to live SEO data, site audits, keyword metrics, backlinks, and rankings via the hosted FastestRank MCP server at `https://app.fastestrank.com/mcp`.
+FastestRank provides SEO intelligence for AI agents (Claude Code, Codex CLI, Cursor, and Agents). It connects AI models to live SEO data, site audits, keyword metrics, backlinks, and rankings via the hosted FastestRank MCP server at `https://app.fastestrank.com/mcp/`.
 
 ## Features
 
@@ -30,7 +30,7 @@ Add the FastestRank marketplace and install the plugin:
 /plugin install fastestrank@fastestrank
 ```
 
-Follow the prompt to approve the OAuth connection to FastestRank MCP at `https://app.fastestrank.com/mcp`.
+Follow the prompt to approve the OAuth connection to FastestRank MCP at `https://app.fastestrank.com/mcp/`.
 
 ### Codex CLI
 
@@ -66,8 +66,10 @@ npm run check-repo
 npm test
 ```
 
-## Security & Trademarks
+## Security, Trademarks & Licences
 
 - For security reporting, see [SECURITY.md](./SECURITY.md).
 - For trademark and brand usage policy, see [TRADEMARKS.md](./TRADEMARKS.md).
+- For public distribution scope and verification, see [docs/PUBLIC_DISTRIBUTION.md](./docs/PUBLIC_DISTRIBUTION.md).
+- For third-party notices and upstream attribution, see [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md).
 - Code is released under the [MIT License](./LICENSE).
