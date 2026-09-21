@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0.0",
+  "releaseVersion": "1.0.0",
+  "repository": "https://github.com/fastestrank/fastestrank",
+  "skills": [
+    "competitive-landscape",
+    "competitor-analysis",
+    "keyword-clustering",
+    "keyword-research",
+    "link-prospecting",
+    "local-seo",
+    "seo-audit",
+    "seo-coach",
+    "seo-project-setup",
+    "seo-report"
+  ],
+  "files": {
+    "competitive-landscape/SKILL.md": "b9e20a004374dc5ff0f3265333c28e796e2a98e01e2637a5435b975682b9fb1f",
+    "competitor-analysis/SKILL.md": "7f30dc14792369afa46d6de81c0f3a6b975fb3d075c5b9009555198844af5248",
+    "keyword-clustering/SKILL.md": "820a8697c9cb1fe48a934f5b27e2e9035aa857bcdc3d69bc1d86d8260efc7a72",
+    "keyword-research/SKILL.md": "72712c79538f01ff1866d6de444f99e111104f2614b590dea34c70486e0dbb77",
+    "link-prospecting/SKILL.md": "8da5942fc483e9f5c816629f5defc5ecb24239ea533800151db67b77c0311c81",
+    "local-seo/SKILL.md": "93c3f0982aea619d9845c3729ef23a42793199eeb5a323e2c36a6464840d502c",
+    "seo-audit/SKILL.md": "abffc9f9658d85d19dce02446e065a72322c817d66f1909fb867c49520719fe4",
+    "seo-coach/SKILL.md": "dd58a4104ab4a42f79adc681e02a0eee129152a0e2276de6e3dcf43f569a703b",
+    "seo-project-setup/SKILL.md": "c5b2dd9ab2afc61c4805e5be25a36eec9e720d196906b7e7c0b3e745afea08f3",
+    "seo-report/SKILL.md": "b713ff6c89c92e0ac4391ac7f4feaae2e2c942aed3e1b76d1a1e21a4f2f48abd"
+  }
+}

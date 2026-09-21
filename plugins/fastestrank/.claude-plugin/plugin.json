@@ -1,0 +1,29 @@
+{
+  "name": "fastestrank",
+  "displayName": "FastestRank",
+  "version": "1.0.0",
+  "description": "FastestRank gives your AI agent live SEO data, keyword research, competitor analysis, backlinks, and site audits via hosted MCP.",
+  "author": {
+    "name": "FastestRank",
+    "url": "https://www.fastestrank.com"
+  },
+  "homepage": "https://www.fastestrank.com",
+  "repository": "https://github.com/fastestrank/fastestrank",
+  "license": "MIT",
+  "keywords": [
+    "seo",
+    "keyword-research",
+    "serp",
+    "site-audit",
+    "backlinks",
+    "search-console",
+    "rank-tracking",
+    "local-seo"
+  ],
+  "mcpServers": {
+    "fastestrank": {
+      "type": "http",
+      "url": "https://app.fastestrank.com/mcp"
+    }
+  }
+}

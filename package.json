@@ -1,0 +1,27 @@
+{
+  "name": "fastestrank",
+  "version": "1.0.0",
+  "description": "FastestRank plugin, MCP client configurations, and agent skills distribution",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "sync-skills": "node scripts/sync-skills.mjs",
+    "check-skills": "node scripts/check-skills.mjs",
+    "check-repo": "node scripts/check-repository.mjs",
+    "test": "node scripts/check-skills.mjs && node scripts/check-repository.mjs"
+  },
+  "keywords": [
+    "seo",
+    "mcp",
+    "claude-code",
+    "cursor",
+    "codex",
+    "agent-skills"
+  ],
+  "author": "FastestRank <contact@fastestrank.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fastestrank/fastestrank.git"
+  }
+}

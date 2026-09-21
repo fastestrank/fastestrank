@@ -1,0 +1,26 @@
+{
+  "name": "fastestrank",
+  "displayName": "FastestRank",
+  "description": "FastestRank SEO Intelligence plugins and canonical Agent Skills for AI coding agents.",
+  "version": "1.0.0",
+  "plugins": [
+    {
+      "name": "fastestrank",
+      "displayName": "FastestRank",
+      "description": "Hosted SEO MCP server and 10 canonical Agent Skills for SEO research, audits, and reporting.",
+      "version": "1.0.0",
+      "source": {
+        "type": "github",
+        "repo": "fastestrank/fastestrank",
+        "path": "plugins/fastestrank"
+      },
+      "category": "Productivity",
+      "author": {
+        "name": "FastestRank",
+        "url": "https://www.fastestrank.com"
+      },
+      "homepage": "https://www.fastestrank.com",
+      "logo": "https://app.fastestrank.com/fastestrank-mark.svg"
+    }
+  ]
+}

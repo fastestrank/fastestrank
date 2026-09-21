@@ -1,0 +1,20 @@
+# Global fallback
+* @fastestrank/maintainers
+
+# Manifests and plugin definitions
+/.agents/plugins/ @fastestrank/maintainers
+/.claude-plugin/ @fastestrank/maintainers
+/.cursor-plugin/ @fastestrank/maintainers
+/plugins/fastestrank/ @fastestrank/maintainers
+
+# Skills source & lockfile
+/.agents/skills/ @fastestrank/maintainers
+/skills-lock.json @fastestrank/maintainers
+
+# Assets & brand
+/assets/ @fastestrank/maintainers
+/TRADEMARKS.md @fastestrank/maintainers
+
+# CI workflows and scripts
+/.github/workflows/ @fastestrank/maintainers
+/scripts/ @fastestrank/maintainers
