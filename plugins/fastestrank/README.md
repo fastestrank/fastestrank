@@ -4,7 +4,7 @@ FastestRank provides SEO intelligence and live data for AI agents.
 
 ## What's Included
 
-- **Hosted MCP Integration**: Connects to `https://app.fastestrank.com/mcp` for live SEO queries, keyword metrics, backlinks, rank tracking, and site audits.
+- **Hosted MCP Integration**: Connects to `https://app.fastestrank.com/mcp/` for live SEO queries, keyword metrics, backlinks, rank tracking, and site audits.
 - **10 SEO Agent Skills**:
   - `competitive-landscape`: Map SEO market leaders, keyword coverage, and strategic gaps.
   - `competitor-analysis`: Analyze competitor organic footprint, keywords, and backlinks.
@@ -23,4 +23,4 @@ FastestRank provides SEO intelligence and live data for AI agents.
 2. Sign in or connect your FastestRank account when prompted.
 3. Access skills directly in your agent (e.g. `/fastestrank:seo-coach` or `/seo-coach`).
 
-For more documentation, visit [https://www.fastestrank.com](https://www.fastestrank.com).
+For more documentation, visit [https://www.fastestrank.com/](https://www.fastestrank.com/).
