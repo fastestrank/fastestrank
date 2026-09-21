@@ -8,7 +8,8 @@
     "sync-skills": "node scripts/sync-skills.mjs",
     "check-skills": "node scripts/check-skills.mjs",
     "check-repo": "node scripts/check-repository.mjs",
-    "test": "node scripts/check-skills.mjs && node scripts/check-repository.mjs"
+    "check:public-release": "node scripts/validate-public-release.mjs",
+    "test": "node --test scripts/validate-public-release.test.mjs && node scripts/check-skills.mjs && node scripts/check-repository.mjs && node scripts/validate-public-release.mjs"
   },
   "keywords": [
     "seo",

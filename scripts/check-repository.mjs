@@ -14,7 +14,7 @@ import { join, resolve, dirname, relative } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const repoRoot = fileURLToPath(new URL("..", import.meta.url));
-const HOSTED_MCP_URL = "https://app.fastestrank.com/mcp";
+const HOSTED_MCP_URL = "https://app.fastestrank.com/mcp/";
 
 const errors = [];
 
@@ -26,6 +26,7 @@ function error(msg) {
 const requiredFiles = [
   "README.md",
   "LICENSE",
+  "THIRD_PARTY_NOTICES.md",
   "TRADEMARKS.md",
   "SECURITY.md",
   "CONTRIBUTING.md",
@@ -34,6 +35,7 @@ const requiredFiles = [
   "CODEOWNERS",
   "package.json",
   "skills-lock.json",
+  "docs/PUBLIC_DISTRIBUTION.md",
   "docs/migration.md",
   ".github/workflows/ci.yml",
   ".agents/plugins/marketplace.json",
@@ -116,8 +118,15 @@ function scanDirForProhibited(dir) {
     const fullPath = join(dir, entry.name);
     const relPath = relative(repoRoot, fullPath);
 
-    if (relPath === "docs/migration.md" || relPath === "scripts/check-repository.mjs") {
-      // Allowed legacy notes in migration doc, and skip self
+    if (
+      relPath === "docs/migration.md" ||
+      relPath === "scripts/check-repository.mjs" ||
+      relPath === "THIRD_PARTY_NOTICES.md" ||
+      relPath === "docs/PUBLIC_DISTRIBUTION.md" ||
+      relPath === "scripts/validate-public-release.mjs" ||
+      relPath === "scripts/validate-public-release.test.mjs"
+    ) {
+      // Allowed legacy notes in migration doc, legal notices, and test guards
       continue;
     }
 
