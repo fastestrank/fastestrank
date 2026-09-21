@@ -23,3 +23,8 @@ jobs:
 
       - name: Validate Repository Integrity & Policy Checks
         run: node scripts/check-repository.mjs
+
+      - name: Validate Public Release Invariants
+        run: |
+          node scripts/validate-public-release.mjs
+          node --test scripts/validate-public-release.test.mjs
