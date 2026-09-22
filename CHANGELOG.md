@@ -8,6 +8,9 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ### Added
 - Automated repository and skill parity checks in CI.
 
+### Removed
+- Removed legacy `docs/migration.md` guide.
+
 ## [1.0.0] - 2026-09-21
 
 ### Added

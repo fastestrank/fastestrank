@@ -44,10 +44,6 @@ codex mcp login fastestrank
 
 Install the FastestRank plugin directly from the Cursor Marketplace. When prompted, authorize the connection to FastestRank.
 
-## Upgrading from Legacy Packages
-
-If you previously used legacy packages, please refer to the [Migration Guide](./docs/migration.md) for clean-break uninstall and reinstall instructions.
-
 ## Verification & Development
 
 This repository contains zero runtime dependencies. Scripts use standard Node.js (>= 18):

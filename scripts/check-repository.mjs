@@ -6,7 +6,7 @@
 // 3. skills-lock.json presence and validity
 // 4. Required policy and root files (LICENSE, TRADEMARKS, SECURITY, CONTRIBUTING, CHANGELOG, etc.)
 // 5. Hosted MCP endpoint invariants (all mcp configs point to https://app.fastestrank.com/mcp)
-// 6. Prohibited legacy strings outside docs/migration.md
+// 6. Prohibited legacy strings outside legal notices and test guards
 // 7. Internal Markdown links integrity and URL syntax
 
 import { readFileSync, readdirSync, existsSync, statSync } from "node:fs";
@@ -36,7 +36,6 @@ const requiredFiles = [
   "package.json",
   "skills-lock.json",
   "docs/PUBLIC_DISTRIBUTION.md",
-  "docs/migration.md",
   ".github/workflows/ci.yml",
   ".agents/plugins/marketplace.json",
   ".claude-plugin/marketplace.json",
@@ -101,7 +100,7 @@ for (const relPath of jsonFilesToCheck) {
   }
 }
 
-// 3. Prohibited Terms Check (outside docs/migration.md)
+// 3. Prohibited Terms Check
 // Legacy strings: openseo, OpenSEO, every-app/open-seo, fastestrank/fr-engine
 console.log("Scanning for prohibited legacy references...");
 
@@ -119,14 +118,13 @@ function scanDirForProhibited(dir) {
     const relPath = relative(repoRoot, fullPath);
 
     if (
-      relPath === "docs/migration.md" ||
       relPath === "scripts/check-repository.mjs" ||
       relPath === "THIRD_PARTY_NOTICES.md" ||
       relPath === "docs/PUBLIC_DISTRIBUTION.md" ||
       relPath === "scripts/validate-public-release.mjs" ||
       relPath === "scripts/validate-public-release.test.mjs"
     ) {
-      // Allowed legacy notes in migration doc, legal notices, and test guards
+      // Allowed legacy notes in legal notices and test guards
       continue;
     }
 
