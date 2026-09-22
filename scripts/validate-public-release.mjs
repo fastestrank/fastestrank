@@ -57,6 +57,20 @@ export function validatePublicRelease({ repoRoot, expectedLicense = "MIT" }) {
     if (codexMkt.name !== EXPECTED_NAME) {
       err(`.agents/plugins/marketplace.json: name must equal ${EXPECTED_NAME}`);
     }
+    const plugin = codexMkt.plugins?.[0];
+    if (!plugin) {
+      err(`.agents/plugins/marketplace.json: must declare at least one plugin`);
+    } else {
+      if (plugin.name !== EXPECTED_NAME) {
+        err(`.agents/plugins/marketplace.json: plugin.name must equal ${EXPECTED_NAME}`);
+      }
+      if (plugin.source?.source !== "local" || plugin.source?.path !== "./plugins/fastestrank") {
+        err(`.agents/plugins/marketplace.json: plugin.source must be { source: "local", path: "./plugins/fastestrank" }`);
+      }
+      if (plugin.policy?.installation !== "AVAILABLE" || plugin.policy?.authentication !== "ON_INSTALL") {
+        err(`.agents/plugins/marketplace.json: plugin.policy must have installation: "AVAILABLE" and authentication: "ON_INSTALL"`);
+      }
+    }
   }
   if (claudeMkt) {
     if (claudeMkt.name !== EXPECTED_NAME) {

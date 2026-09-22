@@ -18,7 +18,7 @@ test("validatePublicRelease passes on current repository baseline", () => {
   assert.deepEqual(errors, [], `Expected no validation errors, got:\n${errors.join("\n")}`);
 });
 
-test("Manifests parse and contain expected FastestRank identities and endpoints", () => {
+test("Manifests parse and contain expected FastestRank identities, sources, and endpoints", () => {
   const codexMarketplace = JSON.parse(readFileSync(join(repoRoot, ".agents/plugins/marketplace.json"), "utf8"));
   const claudeMarketplace = JSON.parse(readFileSync(join(repoRoot, ".claude-plugin/marketplace.json"), "utf8"));
   const cursorMarketplace = JSON.parse(readFileSync(join(repoRoot, ".cursor-plugin/marketplace.json"), "utf8"));
@@ -31,6 +31,13 @@ test("Manifests parse and contain expected FastestRank identities and endpoints"
   assert.equal(codexMarketplace.name, EXPECTED_NAME);
   assert.equal(claudeMarketplace.name, EXPECTED_NAME);
   assert.equal(cursorMarketplace.name, EXPECTED_NAME);
+
+  // Codex marketplace schema invariants
+  assert.equal(codexMarketplace.plugins[0].name, EXPECTED_NAME);
+  assert.equal(codexMarketplace.plugins[0].source.source, "local");
+  assert.equal(codexMarketplace.plugins[0].source.path, "./plugins/fastestrank");
+  assert.equal(codexMarketplace.plugins[0].policy.installation, "AVAILABLE");
+  assert.equal(codexMarketplace.plugins[0].policy.authentication, "ON_INSTALL");
 
   assert.equal(codexPlugin.name, EXPECTED_NAME);
   assert.equal(claudePlugin.name, EXPECTED_NAME);
@@ -68,6 +75,29 @@ test("validatePublicRelease catches corrupted plugin name fixture", () => {
     assert.ok(
       errors.some((e) => e.includes("contains prohibited legacy term")),
       `Expected error about prohibited legacy term, got: ${errors.join("; ")}`,
+    );
+  } finally {
+    rmSync(tempDir, { recursive: true, force: true });
+  }
+});
+
+test("validatePublicRelease catches invalid Codex marketplace source fixture", () => {
+  const tempDir = mkdtempSync(join(tmpdir(), "fr-release-mkt-test-"));
+  try {
+    cpSync(repoRoot, tempDir, {
+      recursive: true,
+      filter: (src) => !src.includes(".git") && !src.includes("node_modules"),
+    });
+
+    const mktPath = join(tempDir, ".agents/plugins/marketplace.json");
+    const mktJson = JSON.parse(readFileSync(mktPath, "utf8"));
+    mktJson.plugins[0].source = { type: "github", repo: "fastestrank/fastestrank", path: "plugins/fastestrank" };
+    writeFileSync(mktPath, JSON.stringify(mktJson, null, 2));
+
+    const errors = validatePublicRelease({ repoRoot: tempDir, expectedLicense: "MIT" });
+    assert.ok(
+      errors.some((e) => e.includes(".agents/plugins/marketplace.json: plugin.source must be")),
+      `Expected error about invalid plugin source, got: ${errors.join("; ")}`,
     );
   } finally {
     rmSync(tempDir, { recursive: true, force: true });
