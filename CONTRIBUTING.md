@@ -6,7 +6,7 @@ Thank you for your interest in contributing to FastestRank! This repository host
 
 This repository is focused exclusively on **hosted-MCP client distributions**:
 - It provides marketplace manifests and plugin packages for Claude Code, Codex CLI, Cursor, and Agents.
-- It connects strictly to the hosted FastestRank MCP server at `https://app.fastestrank.com/mcp`.
+- It connects strictly to the hosted FastestRank MCP server at `https://app.fastestrank.com/mcp/`.
 - It does **not** host backend engine code, database schemas, internal worker scripts, or private credentials.
 
 ## Development Workflow

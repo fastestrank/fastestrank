@@ -5,7 +5,7 @@
 // 2. Exact 10 skills in .agents/skills and plugins/fastestrank/skills
 // 3. skills-lock.json presence and validity
 // 4. Required policy and root files (LICENSE, TRADEMARKS, SECURITY, CONTRIBUTING, CHANGELOG, etc.)
-// 5. Hosted MCP endpoint invariants (all mcp configs point to https://app.fastestrank.com/mcp)
+// 5. Hosted MCP endpoint invariants (all mcp configs point to https://app.fastestrank.com/mcp/)
 // 6. Prohibited legacy strings outside legal notices and test guards
 // 7. Internal Markdown links integrity and URL syntax
 

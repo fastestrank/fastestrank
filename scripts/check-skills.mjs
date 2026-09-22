@@ -113,7 +113,7 @@ if (!existsSync(lockFilePath)) {
     const lockData = {
       schemaVersion: "1.0.0",
       releaseVersion: "1.0.0",
-      repository: "https://github.com/fastestrank/fastestrank",
+      repository: "https://github.com/fastestrank/fastestrank/",
       skills: SKILLS,
       files: computedHashes,
     };

@@ -16,7 +16,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ### Added
 - Initial standalone public distribution for FastestRank.
 - Platform marketplace manifests for `.agents`, `.claude-plugin`, and `.cursor-plugin`.
-- Hosted MCP integration targeting `https://app.fastestrank.com/mcp`.
+- Hosted MCP integration targeting `https://app.fastestrank.com/mcp/`.
 - 10 canonical SEO Agent Skills:
   - `competitive-landscape`
   - `competitor-analysis`
