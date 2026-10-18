@@ -9,6 +9,8 @@
     "check-skills": "node scripts/check-skills.mjs",
     "check-repo": "node scripts/check-repository.mjs",
     "check:public-release": "node scripts/validate-public-release.mjs",
+    "mcp:validate": "mcp-publisher validate server.json",
+    "mcp:publish": "mcp-publisher publish server.json",
     "test": "node --test scripts/validate-public-release.test.mjs && node scripts/check-skills.mjs && node scripts/check-repository.mjs && node scripts/validate-public-release.mjs"
   },
   "keywords": [

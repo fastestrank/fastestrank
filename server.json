@@ -1,0 +1,52 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.fastestrank/fastestrank",
+  "title": "FastestRank SEO Intelligence",
+  "description": "Live SEO intelligence, rank tracking, SERP metrics, domain audits, and backlink analysis for AI coding agents.",
+  "version": "1.0.0",
+  "websiteUrl": "https://www.fastestrank.com",
+  "repository": {
+    "url": "https://github.com/fastestrank/fastestrank",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://app.fastestrank.com/fastestrank-mark.svg",
+      "mimeType": "image/svg+xml",
+      "sizes": [
+        "any"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://app.fastestrank.com/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "FastestRank API Key or OAuth Bearer Token",
+          "isRequired": false,
+          "isSecret": true,
+          "format": "string"
+        }
+      ]
+    }
+  ],
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "keywords": [
+        "seo",
+        "rank-tracking",
+        "serp",
+        "keywords",
+        "site-audit",
+        "backlinks",
+        "local-seo"
+      ],
+      "license": "MIT",
+      "publisher": "FastestRank",
+      "documentation": "https://github.com/fastestrank/fastestrank#readme"
+    }
+  }
+}
