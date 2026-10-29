@@ -1,0 +1,12 @@
+{
+  "name": "fastestrank",
+  "displayName": "FastestRank SEO Intelligence",
+  "description": "Live SEO data, rank tracking, SERP analysis, and site audits for AI agents.",
+  "icon": "https://fastestrank.com/favicon.ico",
+  "repository": "https://github.com/fastestrank/fastestrank",
+  "connections": {
+    "remote": {
+      "url": "https://app.fastestrank.com/mcp/"
+    }
+  }
+}

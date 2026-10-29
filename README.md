@@ -1,5 +1,9 @@
 # FastestRank
 
+[![Official MCP Registry](https://img.shields.io/badge/MCP%20Registry-io.github.fastestrank%2Ffastestrank-blue?style=flat-square)](https://registry.modelcontextprotocol.io)
+[![Glama Score](https://glama.ai/mcp/servers/fastestrank/fastestrank/badges/score.svg)](https://glama.ai/mcp/servers/fastestrank/fastestrank)
+[![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
+
 > Official FastestRank plugin packages, marketplace manifests, and canonical SEO Agent Skills.
 
 FastestRank provides SEO intelligence for AI agents (Claude Code, Codex CLI, Cursor, and Agents). It connects AI models to live SEO data, site audits, keyword metrics, backlinks, and rankings via the hosted FastestRank MCP server at `https://app.fastestrank.com/mcp/`.

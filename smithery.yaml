@@ -1,0 +1,11 @@
+runtime: "remote"
+startCommand:
+  type: "http"
+  url: "https://app.fastestrank.com/mcp/"
+configSchema:
+  type: "object"
+  properties:
+    apiKey:
+      type: "string"
+      title: "FastestRank API Key"
+      description: "FastestRank API Key or OAuth Bearer Token"
