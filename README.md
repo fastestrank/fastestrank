@@ -48,6 +48,10 @@ codex mcp login fastestrank
 
 Install the FastestRank plugin directly from the Cursor Marketplace. When prompted, authorize the connection to FastestRank.
 
+### Glama Connector
+
+Connect through the [FastestRank Glama Connector](https://glama.ai/mcp/connectors/io.github.fastestrank/fastestrank) or inspect the [Glama server listing](https://glama.ai/mcp/servers/fastestrank/fastestrank).
+
 ## Verification & Development
 
 This repository contains zero runtime dependencies. Scripts use standard Node.js (>= 18):
